@@ -6,7 +6,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
-import InfoIcon from '@material-ui/icons/Info';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import MoreIcon from '@material-ui/icons/More';
 import {withRouter} from "react-router-dom";
 
 const styles = {
@@ -29,11 +30,16 @@ function LeftDrawer(props) {
                             <ListItemIcon>
                                 <HomeIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Homepage"/>
+                            <ListItemText primary="Home"/>
                         </ListItem>
-                        <ListItem button onClick={() => props.history.push("/about")}>
+                        <ListItem button onClick={() => props.history.push("cart")}>
                             <ListItemIcon>
-                                <InfoIcon/>
+                                <ShoppingCartIcon/>
+                            </ListItemIcon>
+                            <ListItemText primary="Cart"/>
+                        </ListItem><ListItem button onClick={() => props.history.push("about")}>
+                            <ListItemIcon>
+                                <MoreIcon/>
                             </ListItemIcon>
                             <ListItemText primary="About"/>
                         </ListItem>
